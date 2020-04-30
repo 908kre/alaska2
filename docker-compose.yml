@@ -1,0 +1,12 @@
+version: '2.4'
+
+services:
+  app:
+    build: ./app
+    volumes:
+      - ./app:/srv
+      - ./store:/store
+    runtime: nvidia
+    environment:
+      - KAGGLE_USERNAME
+      - KAGGLE_KEY
